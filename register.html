@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fiber</title>
+    <link rel="shortcut icon" href="./images/code.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Public+Sans:wght@300;400;700&family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- <a href="" class="btn d-inline-block" id="dark-mood">dark mood</a> -->
+    <div class="row m-0">
+      <div class="col-lg-6 px-5 pt-5 min-vh-100">
+        <div class="my-container col-10 m-auto">
+          <h1 class="fs-5 fw-bolder">Fiber</h1>
+          <h2 class="fs-2 my-4 fw-medium">creat your Fiber account</h2>
+          <form action="#">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >your Name</label
+              >
+              <input
+                required
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput2" class="form-label"
+                >Email address</label
+              >
+              <input
+                required
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput2"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput3" class="form-label"
+                >Passowrd</label
+              >
+              <input
+                required
+                type="password"
+                class="form-control"
+                id="exampleFormControlInput3"
+                placeholder="name@example.com"
+              />
+            </div>
+
+            <div class="form-check mb-3">
+              <input
+                required
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckIndeterminate"
+              />
+              <label class="form-check-label" for="flexCheckIndeterminate">
+                by creating an account on fiber, you agree to the
+                <a href="#">terms & conditions</a>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary col-12 mb-2">
+              register
+            </button>
+            <p class="text-center">
+              Already have an account? <a href="#">log in</a>
+            </p>
+          </form>
+        </div>
+      </div>
+      <div
+        class="col-md-6 bg-primary text-white d-none d-lg-flex flex-column justify-content-center align-items-center"
+      >
+        <img
+          src="./images/Sign Up Image.png"
+          alt="page"
+          class="img-fluid col-10 mb-3"
+        />
+        <div class="col-8 text-center">
+          <h1 class="fs-2">unparalleled templates</h1>
+          <p class="text-white-50 fw-medium">
+            created by a team of professional designers,our templates are
+            unparalleled in the market.
+          </p>
+          <ul
+            class="indicator-ul d-flex justify-content-evenly col-2 mx-auto p-0"
+          >
+            <li class="bg-body"></li>
+            <li class="bg-body bg-opacity-50"></li>
+            <li class="bg-body bg-opacity-50"></li>
+            <li class="bg-body bg-opacity-50"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .querySelector("#dark-mood")
+        .addEventListener("click", (target) => {
+          let root = document.querySelector("html");
+          let mood =
+            root.getAttribute("data-bs-theme") === "light" ? "dark" : "light";
+          root.setAttribute("data-bs-theme", mood);
+          target.target.innerHTML =
+            target.target.innerHTML == "dark mood" ? "light mood" : "dark mood";
+        });
+    </script>
+  </body>
+</html>

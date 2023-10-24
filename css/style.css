@@ -1,0 +1,19 @@
+:root{
+    --bs-primary-rgb: 83, 90, 229;
+    font-family: 'roboto';
+}
+.btn-primary{
+    --bs-btn-bg: rgb(83, 90, 229);
+    --bs-btn-hover-bg: rgb(71, 77, 196);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.indicator-ul li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    list-style: none;
+}
