@@ -37,7 +37,7 @@
                   >community <span class="visually-hidden">(current)</span></a
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-itemض">
                 <a class="nav-link" href="#">pricing</a>
               </li>
               <li class="nav-item">
@@ -364,13 +364,14 @@
     </footer>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script>
-      document.querySelector('#dark-mood').addEventListener('click',(target)=>{
+      document.querySelector('#dark-mood').addEventListener('click',(event)=>{
         let root = document.querySelector('html');
         let mood = root.getAttribute('data-bs-theme') === 'light'? 'dark':'light'
         root.setAttribute('data-bs-theme',mood)
-        target.target.innerHTML = target.target.innerHTML == 'dark mood'?'light mood':'dark mood';
-
+        event.target.innerHTML = event.target.innerHTML == 'dark mood'?'light mood':'dark mood';
+        localStorage.setItem('mood',root.getAttribute('data-bs-theme'))
       })
+    
     </script>
   </body>
 </html>
